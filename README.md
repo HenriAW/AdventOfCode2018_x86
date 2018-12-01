@@ -3,7 +3,7 @@ This is a repository containing solutions to Advent of Code 2018 written in x86 
 
 ## Running the code
 ### Requirements to run code
-This code is written to run on a Linux operating system (I'm using Ubuntu 2016) which I'm running on (Google Cloud Compute)[https://cloud.google.com/].
+This code is written to run on a Linux operating system (I'm using Ubuntu 2016) which I'm running on [Google Cloud Compute](https://cloud.google.com/).
 To run the code you'll need to `sudo apt-get install gcc`.
 
 ### Compiling the code
@@ -11,5 +11,5 @@ Some instructions may not be recognised when using a 64-bit processor, so you ma
 - `--32` when creating the object file. i.e. `as --32 file.s -o file.o`
 - `-m elf_i386` when linking the object files. i.e. `ld -m elf_i386 file.o -o file`
 
-##Resources
-The main book I'm using to learn x86 assembly code is (Programming from the Ground Up)[http://programminggroundup.blogspot.com/]. As I start this project I've just finished chapter 5.
+## Resources
+The main book I'm using to learn x86 assembly code is [Programming from the Ground Up](http://programminggroundup.blogspot.com/). As I start this project I've just finished chapter 5.
