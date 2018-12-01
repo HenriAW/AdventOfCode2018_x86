@@ -27,8 +27,9 @@ newline:
 .section .text
 
 # Stack Positions
-.equ ST_SIZE_RESERVE, 8 # Number of bytes to reserve on the
+.equ ST_SIZE_RESERVE, 12 # Number of bytes to reserve on the
 			# stack for local variables
+.equ RUNNING_TOTAL, -12
 .equ READ_SIZE, -8
 .equ INPUT_FILE, -4
 .equ ST_ARGC, 0		# Number of args
@@ -90,11 +91,12 @@ read_next_char:
  jmp read_next_char  # Continue to read
 
 process_line:
- movl $SYS_WRITE, %eax
- movl $STDOUT, %ebx
- movl $CURRENT_LINE, %ecx
- movl %edi, %edx
- int $LINUX_SYSCALL
+ pushl CURRENT_LINE
+ pushl %edi
+ call ascii_to_int
+ movl RUNNING_TOTAL(%ebp), %ebx
+ addl %ebx, %eax
+ movl %eax, RUNNING_TOTAL(%ebp)
  movl $0, %edi
  jmp read_next_char
 
@@ -102,7 +104,15 @@ end_loop:
  movl $SYS_CLOSE, %eax
  movl INPUT_FILE(%ebp), %ebx
  int $LINUX_SYSCALL
- jmp write_newline
+# Write total to output
+ movl $SYS_WRITE, %eax
+ movl $STDOUT, %ebx
+ movl RUNNING_TOTAL(%ebp), %edx
+ movl $CURRENT_LINE, %ecx
+ movl $0, %edi
+ movl %edx, (%ecx, %edi, 4)
+ movl $4, %edx
+ int $LINUX_SYSCALL
 
 write_newline:
  movl $SYS_WRITE, %eax

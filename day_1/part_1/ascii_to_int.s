@@ -23,8 +23,9 @@
 .equ ST_ARGV_1, 4	# String pointer
 .equ ST_ARGV_2, 8	# String length
 
-.global _start
-_start:
+.global ascii_to_int
+.type ascii_to_int, @function
+ascii_to_int:
  # Stack stuff
  pushl %ebp
  movl %esp, %ebp
