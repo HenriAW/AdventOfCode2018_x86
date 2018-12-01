@@ -3,7 +3,7 @@ This is a repository containing solutions to [Advent of Code 2018](https://adven
 
 ## Running the code
 ### Requirements to run code
-This code is written to run on a Linux operating system (I'm using Ubuntu 2016) which I'm running on [Google Cloud Compute](https://cloud.google.com/).
+This code is written to run on a Linux operating system (I'm using Ubuntu 16.04) which I'm running on [Google Cloud Compute](https://cloud.google.com/).
 To run the code you'll need to `sudo apt-get install gcc`.
 
 ### Compiling the code
