@@ -1,5 +1,5 @@
 # AdventOfCode2018_x86
-This is a repository containing solutions to Advent of Code 2018 written in x86 assembly language. I'll be learning as I go, so this may take some time!
+This is a repository containing solutions to [Advent of Code 2018](https://adventofcode.com/2018) written in x86 assembly language. I'll be learning as I go, so this may take some time!
 
 ## Running the code
 ### Requirements to run code
