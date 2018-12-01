@@ -1,6 +1,7 @@
 .include "linux.s"
 
-# This function will write a file to STDOUT
+# This function will read an input file
+# line-by-line and process each line
 
 .section .data
 
@@ -91,9 +92,10 @@ read_next_char:
  jmp read_next_char  # Continue to read
 
 process_line:
- pushl CURRENT_LINE
  pushl %edi
- call ascii_to_int
+ pushl CURRENT_LINE	 # Need to push params in reverse order
+ call ascii_to_int	 # Return value stored in %eax
+ addl $8, %esp 		 # Move the stack pointer back
  movl RUNNING_TOTAL(%ebp), %ebx
  addl %ebx, %eax
  movl %eax, RUNNING_TOTAL(%ebp)
