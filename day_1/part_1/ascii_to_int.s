@@ -39,7 +39,7 @@ ascii_to_int:
 # Get +/-
  movl ST_ARGV_1(%ebp), %edx
  movb (%edx,%edi,1), %cl
- incl %edi
+# incl %edi
  
 convert_loop:
  movb $0, %ch
