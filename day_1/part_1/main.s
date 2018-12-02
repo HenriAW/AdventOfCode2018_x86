@@ -131,5 +131,5 @@ output_results:
 
 end:
  movl $SYS_EXIT, %eax
- movl $0, %ebx
+ movl RUNNING_TOTAL(%ebp), %ebx
  int $LINUX_SYSCALL
