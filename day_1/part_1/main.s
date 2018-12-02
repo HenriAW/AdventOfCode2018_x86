@@ -34,6 +34,9 @@
 
 .section .data
 
+newline:
+ .ascii "\n"
+
 # Constants
 .equ NEWLINE, '\n'
 .equ O_RDONLY, 0
@@ -45,6 +48,9 @@
 
 .equ MAX_LINE_LENGTH, 100
 .lcomm CURRENT_LINE, MAX_LINE_LENGTH
+
+.equ MAX_SIG_INT32_SZ, 12
+.lcomm INT_TEXT, MAX_SIG_INT32_SZ
 
 .section .text
 
@@ -126,8 +132,25 @@ process_line:
  jmp read_next_char
 
 output_results:
- # Call print_int function
- # Call print_newline function
+ # Call int_to_ascii
+ pushl $INT_TEXT
+ pushl RUNNING_TOTAL(%ebp)
+ call int_to_ascii
+ addl $4, %esp
+
+ # Print result
+ movl $SYS_WRITE, %eax
+ movl $STDOUT, %ebx
+ movl $INT_TEXT, %ecx
+ movl $MAX_SIG_INT32_SZ, %edx
+ int $LINUX_SYSCALL
+
+ # Print newline
+ movl $SYS_WRITE, %eax
+ movl $STDOUT, %ebx
+ movl $newline, %ecx
+ movl $1, %edx
+ int $LINUX_SYSCALL
 
 end:
  movl $SYS_EXIT, %eax

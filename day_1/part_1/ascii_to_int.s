@@ -15,14 +15,12 @@
 
 .equ MINUS, '-'
 .equ PLUS, '+'
-.equ INT_CONVERSION, 48     # 0 is ascii number 48, so an 
-                            # int char - 48 is it's true value
 
 .section .text
 
 # Stack positions
 .equ ST_SIZE_RESERVE, 0
-.equ ST_OLD_EBP, 0		# Number of args
+.equ ST_OLD_EBP, 0
 .equ ST_RETURN_ADDRESS, 4
 .equ ST_ARGV_1, 8		# String pointer
 .equ ST_ARGV_2, 12		# String length
@@ -57,7 +55,7 @@ convert_loop:
  decl %edi
 
  # Get int-char value
- subb $INT_CONVERSION, %ch
+ subb $'0', %ch
  
  # Move int to %edx and multiply with base multiplier
  movl $0, %edx
