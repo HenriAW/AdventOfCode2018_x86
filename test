@@ -1,8 +1,8 @@
 Volume in drive C has no label.
- Volume Serial Number is 3C71-635E
-
- Directory of C:\ProgramData\App-V\9C919CA3-E885-4735-B117-B505F8357470\987D4E5E-C8A7-46BE-B900-8F9BB1FABB89\Root\VFS\ProgramFilesX86\NICE Systems\Real-Time Client
-
+Volume Serial Number is 3C71-635E
+ 
+Directory of C:\ProgramData\App-V\B5EF04E9-71CB-4CDE-9EA1-E5207FFA592B\46DBD297-CA35-4F82-BEDE-0EC9C1399A7D\Root\VFS\ProgramFilesX86\WR\NICE Systems\Real-Time Client
+ 
     <DIR>          .
     <DIR>          ..
            130,048 ABBYYOcrCpp.dll
@@ -131,7 +131,7 @@ Volume in drive C has no label.
             82,944 Composia.DCHtmlControlWrappers.dll
              6,656 Composia.DCInfo.dll
             22,016 Composia.DCInputEmulation.dll
-           176,640 Composia.DCJavaControlWrappers.dll
+           176,640 Composia.DCJavaControlWrapers.dll
             12,800 Composia.DCKeyboardSpy.dll
             13,312 Composia.DCMenu.dll
             12,800 Composia.DCMouseSpy.dll
@@ -158,7 +158,7 @@ Volume in drive C has no label.
            102,400 Composia.Player.dll
            262,144 Composia.VisualSceneStudio.dll
             21,504 Composia.WindowIdentification.dll
-             4,035 conflog.log
+             4,047 conflog.log
            116,736 Connectivity.dll
             59,904 Connectivity.JSwing.OracleForms.Extension.dll
            144,896 Connectivity.Shared.dll
@@ -379,7 +379,7 @@ Volume in drive C has no label.
             96,768 JavaInjector-64.dll
            103,936 javaInjector.dll
             76,288 JavaInjectorService.exe
-                77 JavaInstallerLog
+                80 JavaInstallerLog
                 28 javaLocations
         51,922,432 JavaMapper-64.dll
         32,588,288 JavaMapper.dll
@@ -452,10 +452,10 @@ Volume in drive C has no label.
            674,816 PSpyAgent.dll
     <DIR>          Resources
            159,744 RTClient.exe
-            23,628 RTClient.exe.config
+            23,725 RTClient.exe.config
              7,461 RTGeneralService.zip
             57,344 RTI Launcher.exe
-               572 RTI Launcher.exe.config
+               575 RTI Launcher.exe.config
             16,896 ScreenPluginAux.dll
            433,664 ScreenPluginIE.dll
            113,664 ScreenPluginJSwing.dll
@@ -491,7 +491,7 @@ Volume in drive C has no label.
             22,016 Updater.exe
              4,445 Updater.exe.config
             49,152 upgradeInstaller.dll
-             2,114 upgradeInstaller.InstallLog
+             2,144 upgradeInstaller.InstallLog
              2,597 upgradeInstaller.InstallState
              2,049 UserPreferences.xml
            177,152 VSAccessiblePicker.dll
@@ -588,5 +588,5 @@ Volume in drive C has no label.
             22,016 Win32GlobAgentExt.dll
             68,608 Win64HookManager.exe
             79,360 WinInternalServer64.dll
-             579 File(s)    228,160,592 bytes
-               6 Dir(s)  45,313,404,928 bytes free
+             579 File(s)    228,160,737 bytes
+               6 Dir(s)  45,389,307,904 bytes free
